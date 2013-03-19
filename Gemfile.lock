@@ -1,23 +1,10 @@
 GIT
-  remote: git://github.com/gregbell/active_admin.git
-  revision: 811f286fda3b6dfa91aa172b2471ee56346d539d
-  ref: 811f286fda3b6dfa91aa
-  specs:
-    activeadmin (0.2.2)
-      devise (>= 1.1.2)
-      fastercsv
-      formtastic (>= 1.1.0)
-      inherited_resources
-      kaminari (>= 0.12.4)
-      meta_search (>= 0.9.2)
-      rails (>= 3.0.0)
-      sass (>= 3.1.0)
-
-GIT
   remote: git://github.com/thedarkone/rails-dev-boost.git
-  revision: 18dbce9593808eb2a4f5b4eb1135d8a261327302
+  revision: d21b297863221d6682a99c0207ac3d219a5e7ba4
   specs:
-    rails-dev-boost (0.1.1)
+    rails-dev-boost (0.2.1)
+      listen (>= 0.5)
+      rails (>= 3.0)
 
 GEM
   remote: http://rubygems.org/
@@ -36,6 +23,18 @@ GEM
       rack-mount (~> 0.6.14)
       rack-test (~> 0.5.7)
       tzinfo (~> 0.3.23)
+    activeadmin (0.5.1)
+      arbre (>= 1.0.1)
+      bourbon (>= 1.0.0)
+      devise (>= 1.1.2)
+      fastercsv
+      formtastic (>= 2.0.0)
+      inherited_resources (>= 1.3.1)
+      jquery-rails (>= 1.0.0)
+      kaminari (>= 0.13.0)
+      meta_search (>= 0.9.2)
+      rails (>= 3.0.0)
+      sass (>= 3.1.0)
     activemodel (3.0.19)
       activesupport (= 3.0.19)
       builder (~> 2.1.2)
@@ -49,40 +48,52 @@ GEM
       activemodel (= 3.0.19)
       activesupport (= 3.0.19)
     activesupport (3.0.19)
+    arbre (1.0.1)
+      activesupport (>= 3.0.0)
     arel (2.0.10)
-    bcrypt-ruby (2.1.4)
+    bcrypt-ruby (3.0.1)
+    bourbon (3.1.1)
+      sass (>= 3.2.0)
+      thor
     builder (2.1.2)
-    cocaine (0.1.0)
-    devise (1.4.2)
-      bcrypt-ruby (~> 2.1.2)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.1)
+      climate_control (>= 0.0.3, < 1.0)
+    devise (1.5.4)
+      bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
-      warden (~> 1.0.3)
+      warden (~> 1.1)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    fastercsv (1.5.4)
+    fastercsv (1.5.5)
     feed-normalizer (1.5.2)
       hpricot (>= 0.6)
       simple-rss (>= 1.1)
-    formtastic (1.2.4)
-      actionpack (>= 2.3.7)
-      activesupport (>= 2.3.7)
-      i18n (~> 0.4)
-    googl (0.5.0)
-      httparty (>= 0.6.1)
+    formtastic (2.2.1)
+      actionpack (>= 3.0)
+    googl (0.6.3)
+      httparty (~> 0.10.0)
       json (>= 1.4.6)
-    haml (3.1.2)
+    haml (4.0.0)
+      tilt
     has_scope (0.5.1)
-    hpricot (0.8.4)
-    httparty (0.8.0)
-      multi_json
-      multi_xml
+    hpricot (0.8.6)
+    httparty (0.10.2)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.5.0)
-    inherited_resources (1.2.2)
+    inherited_resources (1.3.1)
       has_scope (~> 0.5.0)
-      responders (~> 0.6.0)
+      responders (~> 0.6)
+    jquery-rails (2.2.1)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
     json (1.7.7)
-    kaminari (0.12.4)
-      rails (>= 3.0.0)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    listen (0.7.3)
     mail (2.2.19)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -93,21 +104,23 @@ GEM
       activerecord (~> 3.0.2)
       activesupport (~> 3.0.2)
       arel (~> 2.0.2)
-    mime-types (1.19)
-    mocha (0.9.12)
-    multi_json (1.0.3)
-    multi_xml (0.4.0)
-    mysql2 (0.2.11)
+    metaclass (0.0.1)
+    mime-types (1.21)
+    mocha (0.13.3)
+      metaclass (~> 0.0.1)
+    multi_json (1.7.1)
+    multi_xml (0.5.3)
     nifty-generators (0.4.6)
-    nokogiri (1.5.0)
-    orm_adapter (0.0.5)
-    paperclip (2.3.16)
-      activerecord (>= 2.3.0)
-      activesupport (>= 2.3.2)
-      cocaine (>= 0.0.2)
+    nokogiri (1.5.7)
+    orm_adapter (0.0.7)
+    paperclip (3.4.1)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.0)
       mime-types
     polyglot (0.3.3)
-    rack (1.2.6)
+    rack (1.2.8)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
     rack-test (0.5.7)
@@ -120,7 +133,7 @@ GEM
       activesupport (= 3.0.19)
       bundler (~> 1.0)
       railties (= 3.0.19)
-    rails-backup-migrate (0.0.8)
+    rails-backup-migrate (0.0.12)
       activerecord (>= 2.3)
     railties (3.0.19)
       actionpack (= 3.0.19)
@@ -129,32 +142,35 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.4)
     rake (10.0.3)
-    rdiscount (1.6.8)
-    rdoc (3.12)
+    rdiscount (2.0.7.1)
+    rdoc (3.12.2)
       json (~> 1.4)
-    responders (0.6.4)
-    sass (3.1.7)
+    responders (0.6.5)
+    sass (3.2.7)
     simple-rss (1.2.3)
+    sqlite3 (1.3.7)
+    sqlite3-ruby (1.3.3)
+      sqlite3 (>= 1.3.3)
     thor (0.14.6)
+    tilt (1.3.6)
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.35)
-    warden (1.0.5)
+    tzinfo (0.3.37)
+    warden (1.2.1)
       rack (>= 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  activeadmin!
+  activeadmin (~> 0.5.1)
   feed-normalizer
   googl
   haml
   json (~> 1.7.7)
   kaminari
   mocha
-  mysql2 (~> 0.2.6)
   nifty-generators
   nokogiri
   paperclip
@@ -163,3 +179,4 @@ DEPENDENCIES
   rails-dev-boost!
   rdiscount
   sass
+  sqlite3-ruby
