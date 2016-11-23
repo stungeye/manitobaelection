@@ -5,11 +5,11 @@ gem 'rails', '3.0.19'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '~> 0.2.6'
+#gem 'mysql2', '~> 0.2.6'
 gem 'haml'
 gem 'sass'
 gem 'nifty-generators', :group => :development
-gem 'activeadmin', :git => 'git://github.com/gregbell/active_admin.git', :ref => '811f286fda3b6dfa91aa'
+gem 'activeadmin', '~> 0.5.1'
 gem 'paperclip'
 gem 'rails-backup-migrate'
 gem 'nokogiri'
@@ -36,7 +36,7 @@ end
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
